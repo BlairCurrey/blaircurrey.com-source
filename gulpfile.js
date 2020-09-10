@@ -5,7 +5,11 @@ const purgecss = require('gulp-purgecss');
 const { watch, series } = require('gulp');
 
 function clean() {
-    return del([ '_site' ])
+    //This will delete the _site directory which contains the git repo
+    //including other needed files. Need to rework. Probably want
+    //to wrap the _site file inside another file to hold the things
+    //I dont want to delete on clean.
+    // return del([ '_site' ])
 }
 
 function style(){
