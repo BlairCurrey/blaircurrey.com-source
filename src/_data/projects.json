@@ -1,0 +1,52 @@
+{
+    "projects": [
+        {
+            "title": "Lake Generator",
+            "img": "/img/projects/lake-gen.jpg",
+            "githubLink": "https://github.com/BlairCurrey/lake-generator",
+            "demoLink": "",
+            "otherLink": "",
+            "otherLinkDisplay": ""
+        },
+        {
+            "title": "Commute Dashboard",
+            "img": "/img/projects/commute-dashboard.gif",
+            "githubLink": "https://github.com/BlairCurrey/commute-dashboard",
+            "demoLink": "https://blairc-commute-dash.herokuapp.com/dashboard.html?lat1=40.844972&lon1=-74.079847&lat2=40.815750&lon2=-73.950133&depart_id=WR&destination_str=Hoboken",
+            "otherLink": "",
+            "otherLinkDisplay": ""
+        },
+        {
+            "title": "DJ GUI App",
+            "img": "/img/projects/dj-juce.jpg",
+            "githubLink": "https://github.com/BlairCurrey/DJ-juce",
+            "demoLink": "",
+            "otherLink": "https://www.youtube.com/watch?v=iOKKWV8OHlw&t=2s",
+            "otherLinkDisplay": "Watch Demo on Youtube"
+        },
+        {
+            "title": "Nutrition Log",
+            "img": "/img/projects/nutrition-log.jpg",
+            "githubLink": "https://github.com/BlairCurrey/nutrition-log",
+            "demoLink": "https://blairc-nutrition-log.herokuapp.com/",
+            "otherLink": "",
+            "otherLinkDisplay": ""
+        },
+        {
+            "title": "Data Visualization",
+            "img": "/img/projects/data-vis.jpg",
+            "githubLink": "https://github.com/BlairCurrey/data-vis",
+            "demoLink": "https://blaircurrey.github.io/data-vis/",
+            "otherLink": "",
+            "otherLinkDisplay": ""
+        },
+        {
+            "title": "YouTube Rabbithole",
+            "img": "/img/projects/yt-rabbit-hole.jpg",
+            "githubLink": "https://github.com/BlairCurrey/youtube-rabbithole",
+            "demoLink": "",
+            "otherLink": "",
+            "otherLinkDisplay": ""
+        }
+    ]
+}

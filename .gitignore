@@ -1,0 +1,8 @@
+# Miscellaneous files in root
+Z_dev-resources
+
+# Everything in node_modules
+node_modules
+
+# The generated site, in a different repo
+_site

@@ -1,0 +1,1 @@
+This repository holds the source and configuration files for my personal website, blaircurrey.com, made with the [Eleventy static site generator](https://www.11ty.dev/). My repository for the Eleventy-generated files, which constitute the hosted website, can be found [here](https://github.com/BlairCurrey/blaircurrey.com).

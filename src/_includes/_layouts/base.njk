@@ -1,0 +1,72 @@
+{% set fullName = [metadata.firstName, metadata.lastName] | join(" ") %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+		<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Personal website for {{fullName}}">
+		<meta name="author" content="{{fullName}}">
+    <meta name="keywords" content="{{metadata.firstName}}, {{metadata.lastName}}, portfolio">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/us-flag-152.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/us-flag-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/us-flag-16.png">
+    
+    <!-- Style -->
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+    <title>{{fullName}}</title>
+    
+  </head>
+  <body>
+    <input type="checkbox" id="theme-switch">
+    <div id="theme-body">
+      <header>
+        <!-- Navigation -->
+        <div class="fixed-top" id="navigation">
+          <nav class="navbar navbar-expand-md navbar-default container">
+            <a aria-current="page" href="/" class="navbar-brand pl-0">{{fullName}}</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false">
+                <title>Menu</title>
+                <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path>
+              </svg>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+              <div class="navbar-nav align-items-center ml-auto">
+                <a class="nav-item nav-link mx-2" href="/#projects">Projects</a>
+                {# <a class="nav-item nav-link mx-2" href="/posts">Blog</a> #}
+                <label class=" mx-2"id="theme-switch-icon" for="theme-switch"><i class="fas fa-adjust"></i></label>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <main role="main" class="mt-5 mb-5">
+        
+        <!--CONTENT -->
+        {{ content | safe }}
+
+      </main>
+      <!-- Footer -->
+      <footer class="page-footer">
+        <div class="container">
+          <div class="row">
+            <div class="column-sm-12 mx-auto my-2">
+              <a class="designed-by" href="{{metadata.site_repository}}">Designed and built by {{fullName}} <i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+
+  <!-- Bootstrap requirements: jquery, popper, bootstrap js plugins -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <script src="/js/main.js"></script>
+</html>

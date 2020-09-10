@@ -1,0 +1,34 @@
+{
+  "name": "blaircurrey.com",
+  "version": "1.0.0",
+  "description": "Personal website for Blair Currey",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx eleventy",
+    "start": "npx eleventy --serve --watch",
+    "debug": "set DEBUG=Eleventy* & npx @11ty/eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlairCurrey/blaircurrey.com.git"
+  },
+  "author": "Blair Currey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BlairCurrey/blaircurrey.com/issues"
+  },
+  "homepage": "https://github.com/BlairCurrey/blaircurrey.com#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.2"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-purgecss": "^2.3.0",
+    "gulp-sass": "^4.1.0",
+    "luxon": "^1.25.0",
+    "markdown-it": "^11.0.0"
+  }
+}

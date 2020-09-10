@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <!-- Profile -->
+    <div class="col-12 col-md-4 order-md-2" id="profile">
+      <!-- Image -->
+      <div class="float-md-right">
+        <img src="/img/headshot.jpg" class ="img-responsive rounded-circle" id="profile-headshot" alt="Headshot of {{metadata.firstName}}">
+        <!-- Icons -->
+        <div id="profile-icons" class="text-center mt-3">
+          <a href="{{metadata.github}}" id="github" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github fa-2x px-1" data-toggle="tooltip" title="Explore my work on GitHub"></i></a>
+          <a href="{{metadata.linkedin}}" id="linkedin" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin fa-2x px-1" data-toggle="tooltip" title="Connect on LinkedIn"></i></a>
+          <a href="mailto:{{metadata.email}}" id="email">
+            <i class="fas fa-envelope fa-2x px-1" data-toggle="tooltip" title="Email me"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- Copy -->
+    <div class="col12 col-md-8 order-md-1 my-auto">
+      <h1 class="mt-3">Hello, I'm {{metadata.firstName}}</h1>
+      <p>
+          I am a computer science student at the <a href="https://london.ac.uk/courses/computer-science">University of London</a> 
+          and aspiring software developer located in the New York City area. I have prior experience in agile manufacturing and a B.A. 
+          in Philosophy & Religion from <a href="https://www.wabash.edu/">Wabash College</a>. My personal interests include
+          cooking and exploring the great outdoors.
+      </p>
+    </div>
+  </div>
+</div>

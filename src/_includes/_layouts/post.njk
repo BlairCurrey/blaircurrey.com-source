@@ -1,0 +1,10 @@
+---
+layout: _layouts/base.njk
+---
+<div class="container" id="article">
+    <h1>{{title}}</h1>
+    <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+    <div id="article-body">
+        <p>{{ content | safe }}</p>
+    </div>
+</div>
