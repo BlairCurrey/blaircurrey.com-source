@@ -5,11 +5,11 @@ const purgecss = require('gulp-purgecss');
 const { watch, series } = require('gulp');
 
 function clean() {
-    //This will delete the _site directory which contains the git repo
-    //including other needed files. Need to rework. Probably want
-    //to wrap the _site file inside another file to hold the things
-    //I dont want to delete on clean.
-    // return del([ '_site' ])
+    // Cannot delete entire '_site', because git repo lives there.
+    // Alternative is to wrap '_site' in new folder for repo and spoof index.html
+    // or find another github pages workaround (gh-pages expects index.html in root)
+    build = ['_site/css', '_site/img', '_site/js','_site/posts', '_site/index.html']
+    return del(build)
 }
 
 function style(){
@@ -22,8 +22,8 @@ function purge(){
     return gulp.src('src/scss/main.css')
         .pipe(purgecss({
             content: ['src/**/*.html', 'src/**/*.njk', 'src/**/*.js'],
-            whitelistPatterns: [/tooltip/],
-            whitelistPatternsChildren: [/tooltip/]
+            whitelistPatterns: [/tooltip/, /table/],
+            whitelistPatternsChildren: [/tooltip/, /table/]
         }))
         .pipe(gulp.dest('src/scss/purged'))
 }
