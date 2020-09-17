@@ -1,9 +1,8 @@
 # Miscellaneous files in root
 Z_dev-resources
-_site - Copy
 
 # Everything in node_modules
 node_modules
 
-# The generated site, in a different repo
-_site
+# The generated site, in a different repo (and all copies)
+_site*
