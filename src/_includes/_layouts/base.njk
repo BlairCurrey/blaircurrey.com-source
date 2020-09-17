@@ -3,6 +3,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178248960-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-178248960-1');
+    </script>
+
 		<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Personal website for {{fullName}}">
@@ -38,8 +48,8 @@
             <div class="collapse navbar-collapse" id="navbar">
               <div class="navbar-nav align-items-center ml-auto">
                 <a class="nav-item nav-link mx-2" href="/#projects">Projects</a>
-                {# <a class="nav-item nav-link mx-2" href="/posts">Blog</a> #}
-                <label class=" mx-2"id="theme-switch-icon" for="theme-switch"><i class="fas fa-adjust"></i></label>
+                <a class="nav-item nav-link mx-2" href="/posts">Blog</a>
+                <label class="mx-2"id="theme-switch-icon" for="theme-switch"><i class="fas fa-adjust"></i></label>
               </div>
             </div>
           </nav>
