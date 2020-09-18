@@ -1,9 +1,13 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+/* purgecss start ignore */
+
 :root {
     /* Light mode */
     --light-text: #222430;
     --light-bg: white;
+    --light-bg-secondary: #f7f7f7;
+    --light-bg-gist: white;
     --light-border: lightgray;
     --light-github: rgb(50, 220, 50);
     --light-linkedin: rgb(50, 50, 220);
@@ -11,10 +15,15 @@
     --light-icon-hover: var(--light-text);
     --light-pic-shadow: black;
     --light-hamburger: var(--light-text);
+    --light-code: #e01e5a;
+    --light-link: #007bff;
+    --light-link-hover: #0056b3;
   
     /* Dark mode */
     --dark-text: #f7f7f7;
     --dark-bg: #222430;
+    --dark-bg-secondary: #2d2f3f;
+    --dark-bg-gist: rgb(240, 242, 244);
     --dark-border: rgb(64, 59, 94);
     --dark-github: rgb(100, 220, 100);
     --dark-linkedin: rgb(100, 100, 220);
@@ -22,10 +31,16 @@
     --dark-icon-hover: var(--dark-text);
     --dark-pic-shadow: var(--dark-border);
     --dark-hamburger: var(--dark-text);
+    --dark-code: #1fe1a5;
+    --dark-link: #ff8400;
+    --dark-link-hover: #ffa94c;
+
       
     /* Default mode */
     --text-color: var(--light-text);
     --bg-color: var(--light-bg);
+    --bg-color-secondary: var(--light-bg-secondary);
+    --bg-color-gist: var(--light-bg-gist);
     --border-color: var(--light-border);
     --github-color: var(--light-github);
     --linkedin-color: var(--light-linkedin);
@@ -34,6 +49,9 @@
     --swich-shadow-color: var(--dark-bg);
     --pic-shadow-color: var(--light-pic-shadow);
     --hamburger-color: var(--light-hamburger);
+    --code-color: var(--light-code);
+    --link-color: var(--light-link);
+    --link-hover-color: var(--light-link-hover);
     --transition: color .2s, background-color .2s;
 }
 
@@ -41,6 +59,7 @@
 #theme-switch:checked ~ #theme-body {
     --text-color: var(--dark-text);
     --bg-color: var(--dark-bg);
+    --bg-color-secondary: var(--dark-bg-secondary);
     --border-color: var(--dark-border);
     --github-color: var(--dark-github);
     --linkedin-color: var(--dark-linkedin);
@@ -49,15 +68,15 @@
     --swich-shadow-color: var(--light-bg);
     --pic-shadow-color: var(--dark-pic-shadow);
     --hamburger-color: var(--dark-hamburger);
+    --bg-color-gist: var(--dark-bg-gist);
+    --code-color: var(--dark-code);
+    --link-color: var(--dark-link);
+    --link-hover-color: var(--dark-link-hover);
 }
 
 // hide theme switch checkbox ('display: none' is not accessible)
 #theme-switch{
-    position: absolute !important;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-    clip: rect(1px, 1px, 1px, 1px);
+    display: none;
 }
 
 #theme-body {
@@ -71,9 +90,38 @@
 }
 
 //Misc
+a{ color: var(--link-color);}
+a:hover{ color: var(--link-hover-color);}
 nav a, footer a{ color: inherit;}
 #theme-switch-icon{ margin: 0; cursor: pointer;}
 #theme-switch-icon:hover{ text-shadow: 0 0 15px var(--swich-shadow-color);}
+
+//markdown code blocks get converted to 
+//pre element with element inside
+//inline code is just code element
+pre{
+    color: var(--code-color);
+    background-color: var(--bg-color-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+code {
+    color: var(--code-color);
+    background-color: var(--bg-color-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+}
+pre code{
+    border: none;
+}
 
 //HTML
 html{height: 100%;}
@@ -87,6 +135,7 @@ body{
     font-size: 20px;
     color: var(--text-color);
     transition: var(--transition);
+    font-family: "Segoe UI";
 }
 #navigation {
     border-bottom: var(--border-color);
@@ -115,7 +164,8 @@ main {flex: 1}
 //Cards
 .card{
     border-color: var(--border-color);
-    background: var(--bg-color);
+    // background: var(--bg-color);
+    background: var(--bg-color-secondary);
     transition: var(--transition);
     height: 375px;
     display: flex;
@@ -147,9 +197,12 @@ main {flex: 1}
 .list-group{ border: none }
 
 .list-group-item{
-    background: var(--bg-color);
+    // background: var(--bg-color);
     transition: var(--transition);
-    border: none
+    // border: none
+    background-color: var(--bg-color-secondary);
+    border: 1px solid var(--border-color);
+    margin-bottom: 1em;
 }
 
 .post-title{margin: 0;}
@@ -172,10 +225,63 @@ time {
 .hashtag:hover{ color: inherit; text-decoration: none}
 
 //Post
+#article {max-width: 800px;}
+
+#article-body {font-size: 16px;}
+
 #article-body img {
     max-width: 100%;
     margin: 1em auto;
     display: block;
+}
+
+#article-body blockquote {
+    padding: 1em;
+    background-color: var(--bg-color-secondary);
+}
+
+#article-body blockquote>p {
+    margin: 0;
+}
+
+#article-body h3{
+    margin-top: 1em;
+}
+
+.table-responsive{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.table {
+    color: inherit;
+}
+
+.table thead th{
+    border-bottom: none;
+}
+
+.table th,
+.table td{
+    border: 1px solid var(--border-color);
+    padding: 0.25em;
+}
+
+.table tr:nth-child(even) {
+    background-color: var(--bg-color-secondary);
+}
+
+// .gist{
+//     margin-top: 1em;
+//     margin-bottom: 1em;
+// }
+
+.gist-data * {
+    background-color: var(--bg-color-gist) !important;
+}
+
+.gist-data {
+    background-color: var(--bg-color-gist) !important;
 }
 
 //Footer
@@ -184,3 +290,5 @@ footer {
     box-shadow: 0px -1px 15px var(--border-color);
 }
 .designed-by {font-size: .75em;text-decoration: none;}
+
+/* purgecss end ignore */
