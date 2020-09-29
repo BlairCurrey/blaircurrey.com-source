@@ -5,8 +5,8 @@
             "img": "/img/projects/lake-gen.jpg",
             "githubLink": "https://github.com/BlairCurrey/lake-generator",
             "demoLink": "",
-            "otherLink": "",
-            "otherLinkDisplay": ""
+            "otherLink": "/posts/1/",
+            "otherLinkText": "Read Blog Post"
         },
         {
             "title": "Commute Dashboard",
@@ -14,7 +14,7 @@
             "githubLink": "https://github.com/BlairCurrey/commute-dashboard",
             "demoLink": "https://blairc-commute-dash.herokuapp.com/dashboard.html?lat1=40.844972&lon1=-74.079847&lat2=40.815750&lon2=-73.950133&depart_id=WR&destination_str=Hoboken",
             "otherLink": "",
-            "otherLinkDisplay": ""
+            "otherLinkText": ""
         },
         {
             "title": "DJ GUI App",
@@ -22,7 +22,7 @@
             "githubLink": "https://github.com/BlairCurrey/DJ-juce",
             "demoLink": "",
             "otherLink": "https://www.youtube.com/watch?v=iOKKWV8OHlw&t=2s",
-            "otherLinkDisplay": "Watch Demo on Youtube"
+            "otherLinkText": "Watch Demo on Youtube"
         },
         {
             "title": "Nutrition Log",
@@ -30,7 +30,7 @@
             "githubLink": "https://github.com/BlairCurrey/nutrition-log",
             "demoLink": "https://blairc-nutrition-log.herokuapp.com/",
             "otherLink": "",
-            "otherLinkDisplay": ""
+            "otherLinkText": ""
         },
         {
             "title": "Data Visualization",
@@ -38,7 +38,7 @@
             "githubLink": "https://github.com/BlairCurrey/data-vis",
             "demoLink": "https://blaircurrey.github.io/data-vis/",
             "otherLink": "",
-            "otherLinkDisplay": ""
+            "otherLinkText": ""
         },
         {
             "title": "YouTube Rabbithole",
@@ -46,7 +46,7 @@
             "githubLink": "https://github.com/BlairCurrey/youtube-rabbithole",
             "demoLink": "",
             "otherLink": "",
-            "otherLinkDisplay": ""
+            "otherLinkText": ""
         }
     ]
 }
