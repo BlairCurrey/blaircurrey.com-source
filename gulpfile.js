@@ -5,6 +5,7 @@ const purgecss = require('gulp-purgecss');
 const { watch, series } = require('gulp');
 
 function clean() {
+    // Only delete things specified in build.
     // Cannot delete entire '_site', because git repo lives there.
     // Alternative is to wrap '_site' in new folder for repo and spoof index.html
     // or find another github pages workaround (gh-pages expects index.html in root)
