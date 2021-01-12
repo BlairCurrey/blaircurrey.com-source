@@ -1,6 +1,14 @@
 {
     "projects": [
         {
+            "title": "Compass",
+            "img": "/img/projects/compass.svg",
+            "githubLink": "https://github.com/world-class/compass",
+            "demoLink": "https://ucompass.tech/courses",
+            "otherLink": "",
+            "otherLinkText": ""
+        },
+        {
             "title": "Lake Generator",
             "img": "/img/projects/lake-gen.jpg",
             "githubLink": "https://github.com/BlairCurrey/lake-generator",
@@ -23,14 +31,6 @@
             "demoLink": "",
             "otherLink": "https://www.youtube.com/watch?v=iOKKWV8OHlw&t=2s",
             "otherLinkText": "Watch Demo on Youtube"
-        },
-        {
-            "title": "Nutrition Log",
-            "img": "/img/projects/nutrition-log.jpg",
-            "githubLink": "https://github.com/BlairCurrey/nutrition-log",
-            "demoLink": "https://blairc-nutrition-log.herokuapp.com/",
-            "otherLink": "",
-            "otherLinkText": ""
         },
         {
             "title": "Data Visualization",
