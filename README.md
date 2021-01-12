@@ -44,10 +44,12 @@ Posts are populated from markdown files in `src/posts/` using `src/_includes/_la
         tags: [posts, NewPostTag1, NewPostTag2]
         ---
 
-        This is the body of the post. Write the post in markdown here. This will show as the excerpt for this post in the list of posts.
+        This is the body of the post. Write the post in markdown here. 
+        This will show as the excerpt for this post in the list of posts.
         <!-- excerpt --> 
 
-        This part and everything after it will not be included as an excerpt in the list of posts.
+        This part and everything after it will not be included as an excerpt 
+        in the list of posts.
 
 All posts need the `posts` tag so that they get displayed to the post list page. The other tags are optional. Excerpts can be defined as shown above or seperately in the header: 
 
