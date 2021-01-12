@@ -4,7 +4,9 @@
         <li class="list-group-item">
             <h1 class="post-title"><a href="{{post.url | url}}">{{post.data.title}}</a></h1>
             <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-            {%if post.data.page.excerpt %}
+            {%if post.data.excerpt %}
+                <div class="excerpt">{{ post.data.excerpt | markdown | safe }}</div>
+            {%elif post.data.page.excerpt %}
                 <div class="excerpt">{{ post.data.page.excerpt | markdown | safe }}</div>
             {% else %}
                 <br>
