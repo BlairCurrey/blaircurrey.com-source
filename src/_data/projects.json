@@ -4,6 +4,7 @@
             "title": "Compass",
             "img": "/img/projects/compass.svg",
             "githubLink": "https://github.com/world-class/compass",
+            "demoLink": "https://compass-reviews.herokuapp.com/courses",
             "otherLink": "",
             "otherLinkText": ""
         },
