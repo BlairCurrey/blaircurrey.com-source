@@ -202,8 +202,10 @@ main {flex: 1}
     // border: none
     background-color: var(--bg-color-secondary);
     border: 1px solid var(--border-color);
-    margin-bottom: 1em;
-}
+    border-radius: inherit;
+    margin-bottom: 1em; }
+    .list-group-item + .list-group-item {
+        border-top-width: 1px !important;}
 
 .post-title{margin: 0;}
 .post-title > a{ color: inherit}
