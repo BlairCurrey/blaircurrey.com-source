@@ -7357,7 +7357,11 @@ main {
   transition: var(--transition);
   background-color: var(--bg-color-secondary);
   border: 1px solid var(--border-color);
+  border-radius: inherit;
   margin-bottom: 1em; }
+
+.list-group-item + .list-group-item {
+  border-top-width: 1px !important; }
 
 .post-title {
   margin: 0; }
