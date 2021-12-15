@@ -2,6 +2,8 @@
 layout: _layouts/home.njk
 permalink: /
 ---
-
+{% import './_includes/_globals.njk' as globals %}
 {% include "_layouts/intro.njk" %}
-{% include "projects.njk" %}
+{% if globals.showProjects %}
+    {% include "projects.njk" %}
+{% endif %}

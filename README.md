@@ -61,3 +61,7 @@ All posts need the `posts` tag so that they get displayed to the post list page.
         ---
 
 Excerpts defined in the header take precedence over excerpts defined in the body of the post.
+
+### Global variables
+
+Global variables are set in `_includes/_globals.njk` and can be imported for use with `{% import '../_globals.njk' as globals %}`. Set these up to be able to hide posts/blog.
