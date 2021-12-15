@@ -1,3 +1,4 @@
+{% import '../_globals.njk' as globals %}
 {% set fullName = [metadata.firstName, metadata.lastName] | join(" ") %}
 
 <!DOCTYPE html>
@@ -13,10 +14,10 @@
       gtag('config', 'UA-178248960-1');
     </script>
 
-		<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Personal website for {{fullName}}">
-		<meta name="author" content="{{fullName}}">
+    <meta name="author" content="{{fullName}}">
     <meta name="keywords" content="{{metadata.firstName}}, {{metadata.lastName}}, portfolio">
     
     <!-- Favicon -->
@@ -47,9 +48,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbar">
               <div class="navbar-nav align-items-center ml-auto">
-                <a class="nav-item nav-link mx-2" href="/#projects">Projects</a>
-                <a class="nav-item nav-link mx-2" href="/posts">Blog</a>
-                <label class="mx-2"id="theme-switch-icon" for="theme-switch"><i class="fas fa-adjust"></i></label>
+                {% if globals.showProjects %}
+                    <a class="nav-item nav-link mx-2" href="/#projects">Projects</a>
+                {% endif %}
+                {% if globals.showBlog %}
+                    <a class="nav-item nav-link mx-2" href="/posts">Blog</a>
+                {% endif %}
+                    <label class="mx-2"id="theme-switch-icon" for="theme-switch"><i class="fas fa-adjust"></i></label>
               </div>
             </div>
           </nav>
@@ -66,7 +71,7 @@
         <div class="container">
           <div class="row">
             <div class="column-sm-12 mx-auto my-2">
-              <a class="designed-by" href="{{metadata.site_repository}}">Designed and built by {{fullName}} <i class="fab fa-github"></i></a>
+              <a class="designed-by" href="{{metadata.site_repository}}"> {{fullName}} <i class="fab fa-github"></i></a>
             </div>
           </div>
         </div>
